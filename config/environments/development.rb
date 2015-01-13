@@ -1,4 +1,15 @@
 Rails.application.configure do
+  # Optional, Rails sets the default to :info
+  config.log_level = :debug
+
+  # Optional, Rails 4 defaults to true in development and false in production
+  config.autoflush_log = true
+  # Required
+  config.logstash.type = :file
+
+  # Optional, defaults to Rails log path
+  config.logstash.path = 'log/development.log'
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
